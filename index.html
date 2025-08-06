@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -36,20 +36,40 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
+            <img 
+            src="static/images/icon.png"
+            class="center"
+            width="180"
+            />
             <h1 class="title is-1 publication-title">\(NavA^3\): Understanding Any Instruction, Navigating Anywhere, Finding Anything</h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><a href="#" target="_blank">First Author</a><sup>*</sup>,</span>
-              <span class="author-block"><a href="#" target="_blank">Second Author</a><sup>*</sup>,</span>
-              <span class="author-block"><a href="#" target="_blank">Third Author</a></span>
-            </div>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Institution Name<br>Conference name and year</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="author-block">
+                <a href="#">Lingfeng Zhang</a><sup>1,2,*</sup>,
+                <a href="#">Xiaoshuai Hao</a><sup>2,*</sup>,
+                <a href="#">Yingbo Tang</a><sup>3</sup>,
+                <a href="#">Xinyu Zheng</a><sup>4</sup>,
+                <a href="#">Pengwei Wang</a><sup>2</sup>,
+                <a href="#">Zhongyuan Wang</a><sup>2</sup>,
+                <a href="#">Wenbo Ding</a><sup>1,†</sup>,
+                <a href="#">Shanghang Zhang</a><sup>2,5,†</sup>
+              </span>
+              <span class="author-block">
+                <sup>1</sup>Tsinghua Shenzhen International Graduate School, Tsinghua University<br>
+                <sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI)<br>
+                <sup>3</sup>Institute of Automation, Chinese Academy of Sciences<br>
+                <sup>4</sup>National Maglev Transportation Engineering Research and Development Center, Tongji University<br>
+                <sup>5</sup>Peking University
+              </span>
+              <br>
+              <span class="author-block">
+                <sup>*</sup>Co-first Authors &nbsp;&nbsp;
+                <sup>†</sup>Corresponding Author
+              </span>
             </div>
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block"><a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a></span>
-                <span class="link-block"><a href="static/pdfs/supplementary_material.pdf" target="_blank" class="button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Supplementary</span></a></span>
+                <span class="link-block"><a href="static/pdfs/nava3.pdf" target="_blank" class="button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Supplementary</span></a></span>
                 <span class="link-block"><a href="https://github.com/YOUR REPO HERE" target="_blank" class="button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a></span>
                 <span class="link-block"><a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="button is-normal is-rounded is-dark"><span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a></span>
               </div>
@@ -60,6 +80,25 @@
     </div>
   </section>
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+            <img 
+                src="static/images/fig1.png"
+                class="pipeline image"
+                alt="pipeline image"
+                style="margin-bottom: 20px;"
+            />
+        <h2 class="subtitle has-text-centered">
+          <b>Execution Process of \(NavA^3\).</b> The global policy employs Reasoning-VLM to interpret high-level instructions (e.g.,
+“hang out the clothes” → clothes hanger) and identify the target location (balcony) using 3D scene understanding. The local
+policy uses Pointing-VLM to navigate waypoints and perform precise object localization with our NaviAfford model, which
+leverages spatial affordance understanding to accurately locate the target object (clothes hanger).
+        </h2>
+      </div>
+    </div>
+</section>
+  
   <!-- Teaser video (Video 1) -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -71,12 +110,14 @@
     </div>
   </section>
 
+  
+  
   <!-- Video carousel (Videos 2‑6) -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Demo Videos</h2>
-        <div id="video-carousel" class="carousel results-carousel">
+        <h2 class="title is-3">Demo Videos (One shot without cuts)</h2>
+        <div id="video-carousel-2" class="carousel results-carousel">
           <div class="item"><video autoplay controls muted loop height="100%"><source src="static/videos/2.mp4" type="video/mp4"></video></div>
           <div class="item"><video autoplay controls muted loop height="100%"><source src="static/videos/3.mp4" type="video/mp4"></video></div>
           <div class="item"><video autoplay controls muted loop height="100%"><source src="static/videos/4.mp4" type="video/mp4"></video></div>
@@ -86,6 +127,254 @@
       </div>
     </div>
   </section>
+<br>
+
+
+<!-- Cross-embodiment Demos -->
+<!-- Cross-embodiment Demos -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Cross-embodiment Demos (One shot without cuts)</h2>
+      <div style="width: 80%; margin: 0 auto;">
+        <div class="columns">
+          <div class="column is-half">
+            <video autoplay controls muted loop width="100%">
+              <source src="static/videos/7.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-half">
+            <video autoplay controls muted loop width="100%">
+              <source src="static/videos/8.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+<!-- Abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Embodied navigation is a fundamental capability of embodied intelligence, enabling robots to move and interact within
+            physical environments. However, existing navigation tasks
+            primarily focus on predefined object navigation or instruction
+            following, which significantly differs from human needs in
+            real-world scenarios involving complex, open-ended scenes.
+            To bridge this gap, we introduce a challenging long-horizon
+            navigation task that requires understanding high-level human
+            instructions and performing spatial-aware object navigation
+            in real-world environments. Existing embodied navigation
+            methods struggle with such tasks due to their limitations in
+            comprehending high-level human instructions and localizing
+            objects with an open vocabulary. In this paper, we propose
+            \(NavA^3\), a hierarchical framework divided into two stages:
+            global and local policies. In the global policy, we leverage the
+            reasoning capabilities of Reasoning-VLM to parse high-level
+            human instructions and integrate them with global 3D scene
+            views. This allows us to reason and navigate to regions most
+            likely to contain the goal object. In the local policy, we have
+            collected a dataset of 1.0 million samples of spatial-aware
+            object affordances to train the NaviAfford model (PointingVLM), which provides robust open-vocabulary object localization and spatial awareness for precise goal identification
+            and navigation in complex environments. Extensive experiments demonstrate that \(NavA^3\) achieves SOTA results in
+            navigation performance and can successfully complete longhorizon navigation tasks across different robot embodiments
+            in real-world settings, paving the way for universal embodied
+            navigation. The dataset and code will be made available
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+
+<!-- Method Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Our \(NavA^3\) Framework</h2>
+            <img src="static/images/fig2.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                Our hierarchical approach consists of two stages: the global policy uses
+                Reasoning-VLM to interpret high-level human instructions and marks the probable area in the 3D scene. Upon reaching the
+                target area, the local policy employs Pointing-VLM to search for the goal object at each waypoint. If not found, it predicts the
+                next waypoint; if detected, it marks the object on the egocentric image and navigates to the final destination.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Construction Process of 3D Scenes -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Construction Process of 3D Scenes</h2>
+            <img src="static/images/fig3.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                We reconstruct 3D scenes from RGB scan images using 2D-to-3D reconstruction
+                techniques. These scenes are then transformed into annotated top-down views, which are subsequently processed by VisionLanguage Models (VLMs) for navigation planning. This approach enhances the accuracy and efficiency of navigation tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- NaviAfford Model Training and Deployment Process -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">NaviAfford Model Training and Deployment Process</h2>
+            <img src="static/images/fig4.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                The NaviAfford model learns object and spatial affordances
+                from various indoor scenes to output precise point coordinates. During navigation, it performs real-time object localization and
+                generates target points, which the local policy converts into robot coordinates for effective navigation to goal objects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+<!-- Method Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Experimental Results</h2>
+            <h2 class="subtitle is-4">Comparison with SOTA methods</h2>
+            <img src="static/images/tab1.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                \(^*\) denotes that we modify the method to allow it to
+complete our task. Our \(NavA^3\) outperforms all the SOTA methods on the navigation performance..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="subtitle is-4">Ablation Study on Annotation Components</h2>
+            <img src="static/images/tab2.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                Ablation Study on Annotation Components.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="subtitle is-4">Ablation Study on Different Reasoning-VLMs</h2>
+            <img src="static/images/tab3.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                Ablation Study on Different Reasoning-VLMs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="subtitle is-4">Ablation Study on Different Pointing-VLMs</h2>
+            <img src="static/images/tab4.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                Ablation Study on Different Pointing-VLMs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+<!-- NaviAfford Model Training and Deployment Process -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Qualitative analysis on NaviAfford and \(NavA^3\).</h2>
+            <img src="static/images/fig5.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                Affordance visualization includes the performance of NaviAfford
+                model on object affordance and spatial affordance. Long-horizon navigation tasks visualization includes the performance of
+                \(NavA^3\) hierarchical system in real-world environments and its cross-embodiment deployment capabilities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- BibTeX citation -->
   <section class="section" id="BibTeX">
